@@ -95,23 +95,62 @@
 
 	// Main Sections: Two.
 
-		// Lightbox gallery.
-			$window.on('load', function() {
+		// document.addEventListener('DOMContentLoaded', function() {
+		// 	// Get links with 'dynamic-load' class
+		// 	var links = document.querySelectorAll('a.dynamic-load');
+		// 	var main = document.getElementById('main');
+		// 	var iframe;
+		
+		// 	function resizeIframe() {
+		// 		if (iframe) {
+		// 			iframe.style.width = main.clientWidth + 'px';
+		// 			iframe.style.height = main.clientHeight + 'px';
+		// 		}
+		// 	}
+		
+		// 	links.forEach(function(link) {
+		// 		link.addEventListener('click', function(e) {
+		// 			e.preventDefault();
+		// 			var url = this.getAttribute('href');
+					
+		// 			// Request embedded content, add to new iframe
+		// 			iframe = document.createElement('iframe');
+		// 			iframe.src = url + "?embed=true";
+		// 			iframe.style.border = "none";
+		// 			iframe.style.overflow = "auto"; // Allow scrolling if needed
+					
+		// 			// Clear main div, append iframe
+		// 			main.innerHTML = '';
+		// 			main.appendChild(iframe);
+					
+		// 			resizeIframe(); // Initial resize
+		// 			// Scroll to the top of the page
+		// 			window.scrollTo(0, 0);
+		// 		});
+		// 	});
+		
+		// 	// Resize iframe when window is resized
+		// 	window.addEventListener('resize', resizeIframe);
+		// });
 
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
 
-			});
+		// // Lightbox gallery.
+		// 	$window.on('load', function() {
+
+		// 		$('#two').poptrox({
+		// 			caption: function($a) { return $a.next('h3').text(); },
+		// 			overlayColor: '#2c2c2c',
+		// 			overlayOpacity: 0.85,
+		// 			popupCloserText: '',
+		// 			popupLoaderText: '',
+		// 			selector: '.work-item a.image',
+		// 			usePopupCaption: true,
+		// 			usePopupDefaultStyling: false,
+		// 			usePopupEasyClose: false,
+		// 			usePopupNav: true,
+		// 			windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+		// 		});
+
+		// 	});
 
 })(jQuery);
